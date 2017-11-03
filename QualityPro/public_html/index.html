@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Akshay Nagpal | akshaynagpal.me"/>
+
+        <!-- Latest compiled and minified CSS -->
+
+        <link href="Dependecias/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="Dependecias/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <script src="Dependecias/bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <link href="estilos/Myestilo.css" rel="stylesheet" type="text/css"/>
+
+        <script src="filter-gallery.js"></script>
+        <title>Lista Empresas</title>
+    </head>
+    <body class="fondopagina">
+        <div id="items" class="container-fluid">
+            <h1>Selecciona Tu empresa Por Categoria</h1>
+            <!-- BUTTON GROUP FOR CATEGORIES -->
+            <div class="btn-group">
+                <div class="modal fade fondopagina" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Burger king</h4>
+                            </div>
+                            <div class="moda-body">
+                                <div class="row">
+                                    <!--<div class="col-md-8">
+                                        <img src="imagenes/bking.png" alt="" width="150" height="150"/>           
+                                    </div>-->
+                                </div>
+                                <h2 class="centrarTexto">Categoria A</h2><br>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="divEstablecimiento" class="divPopup">
+                                            <div class="col-sm-2 all category2 tamañoDivs">
+
+                                                <div class="row">                                      
+                                                    <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                                                        <img src="imagenes/establecimiento.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                                                    </button>                                                    
+
+                                                    <a href="#" class="btn btn-primary glyphicon glyphicon-thumbs-up" role="button" onclick="javascript: contador()" id="boton">0</a>
+                                                    <a href="#" class="btn btn-default glyphicon glyphicon-thumbs-down" role="button" onclick="javascript: contadorRestar()" id="botonrestar">0</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div id="divTiempos" class="divPopup">
+                                            <div class="col-sm-2 all category2 tamañoDivs">
+
+                                                <div class="row">                                      
+                                                    <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                                                        <img src="imagenes/tiempos.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                                                    </button>
+                                                    <a href="#" class="btn btn-primary glyphicon glyphicon-thumbs-up" role="button">23</a>
+                                                    <a href="#" class="btn btn-default glyphicon glyphicon-thumbs-down" role="button">12</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="divAtencion" class="divPopup">
+                                            <div class="col-sm-2 all category2 tamañoDivs">
+                                                <div class="row">                                      
+                                                    <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                                                        <img src="imagenes/atencion.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                                                    </button>
+                                                    <a href="#" class="btn btn-primary glyphicon glyphicon-thumbs-up" role="button">23</a>
+                                                    <a href="#" class="btn btn-default glyphicon glyphicon-thumbs-down" role="button">12</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="divSugerencias" class="divPopup">
+                                            <div class="col-sm-2 all category2 tamañoDivs">
+
+                                                <form action="sugerencia.html">
+                                                    <div class="row">                                      
+                                                        <button type="submit" class="btn btn-default options-btn options-btn-active">
+                                                            <img src="imagenes/sugerencia.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                                                        </button>                                                        
+                                                        <a href="#" class="btn btn-primary glyphicon glyphicon-thumbs-up" role="button">23</a>
+                                                        <a href="#" class="btn btn-default glyphicon glyphicon-thumbs-down" role="button">12</a>                                                        
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--FINALIZO TESTEO-->
+                            <!--espacion entre el cuerpo del modal y el footer-->
+                            <br>
+                            <!--espacion entre el cuerpo del modal y el footer-->
+                            <div class="modal-footer">
+                                <div class="panel-danger">
+                                    <div class="panel-heading">Sugerencias Hechas</div>
+                                    <div class="panel-body">
+                                        <!--respuesta-->
+                                        <div class="row">                                            
+                                            <div class="col-md-12 panel panel-danger">
+                                                <div class="col-md-9">
+                                                    <h6>Podrian mejorar la calidad, antes era muy buena pero si siguen haciendo la comida como antes tendran mas clientela !</h6>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <h6><b>Andres Franco</b></h6>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <img src="imagenes/perfilSugerencia.jpg" class="img-circle" alt="Cinque Terre" width="35" height="35">                                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--finalizo respuesta-->
+                                        <div class="row">                                            
+                                            <div class="col-md-11 panel panel-danger">
+                                                <div class="col-md-8">
+                                                    <h6>Hola <b>Andres franco</b> hemos mejorado mucho desde la ultima vez,vuelve pronto !</h6>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6><b>Gerente Burguer King</b></h6>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <img src="imagenes/bking_ico.png" class="img-circle" alt="Cinque Terre" width="35" height="35">                                                     
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <!--respuesta-->
+                                        <div class="row">
+                                            <div class="col-md-12 panel panel-danger">
+                                                <div class="col-md-9">
+                                                    <h6>Podrian mejorar la calidad, antes era muy buena pero si siguen haciendo la comida como antes tendran mas clientela !</h6>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <h6><b>Andres Franco</b></h6>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <img src="imagenes/perfilSugerencia.jpg" class="img-circle" alt="Cinque Terre" width="35" height="35">                                                     
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <!--finalizo respuesta-->
+                                    </div>                                    
+                                </div>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary category-button" data-filter = "all"> Todos </button>
+                <button type="button" class="btn btn-primary category-button" data-filter = "category1"> Categoria A </button>
+                <button type="button" class="btn btn-primary category-button" data-filter = "category2"> Categoria B </button>
+                <button type="button" class="btn btn-primary category-button" data-filter = "category3"> Categoria C </button>
+                <button type="button" class="btn btn-primary category-button" data-filter = "category4"> Categoria D </button>                
+            </div>
+            <!-- END BUTTON GROUP FOR CATEGORIES -->
+            <hr>
+
+            <div class="col-sm-2 all category1 tamañoDivs">
+                <div class="col-md-2" id="id3">                        
+                    <div class="row">
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/wendy_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>3</p>                                        
+                </div>
+            </div>
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="id4">
+                    <div class="row">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/bq_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>4</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2">
+                    <div class="row"> 
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/kfc_1.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>5</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category4   tamañoDivs">
+                <div class="col-md-2 ">
+                    <div class="row">    
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/sk_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>6</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="id7">
+                    <div class="row "> 
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/cc_1.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>7</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category1 tamañoDivs">
+                <div class="col-md-2" id="id8">
+                    <div class="row">  
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/cr_1.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>8</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="id9">
+                    <div class="row ">             
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/choo_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>9</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="id10">
+                    <div class="row">               
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/panda_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>10</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category1 tamañoDivs">
+                <div class="col-md-2" id="id11">
+                    <div class="row">               
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/pol_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>11</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="12">
+                    <div class="row">            
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/sb_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>12</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="id13">
+                    <div class="row">            
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hd_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>13</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>14</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/fish_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>15</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/bking_ico.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>16</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>17</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category1 tamañoDivs fondopagina">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/juka_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>18</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="id13">
+                    <div class="row">            
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hd_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>19</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>20</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/fish_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>21</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/bking_ico.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>22</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>23</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category1 tamañoDivs fondopagina">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/juka_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>24</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="id13">
+                    <div class="row">            
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hd_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>25</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>26</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/fish_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>27</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/bking_ico.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>28</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>29</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category1 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/juka_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>30</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category3 tamañoDivs">
+                <div class="col-md-2" id="id13">
+                    <div class="row">            
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hd_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>31</p>
+                </div>
+            </div>
+
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/hb.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>32</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category4 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/fish_1.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>33</p>
+                </div>
+            </div>
+            <div class="col-sm-2 all category2 tamañoDivs">
+                <div class="col-md-2" id="14">
+                    <div class="row ">                                      
+                        <button type="button" class="btn btn-default options-btn options-btn-active" data-toggle="modal" data-target="#myModal">
+                            <img src="imagenes/bking_ico.png" class="img-circle" alt="Cinque Terre" width="100" height="100">     
+                        </button>
+                    </div>
+                    <p>34</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var i = 0;
+            var j=0;
+            function contador()
+            {
+                i = i + 1;
+                var btn = document.getElementById("boton");
+                btn.innerHTML = i;
+            }
+
+            function contadorRestar()
+            {
+                j = j + 1;
+                var btn = document.getElementById("botonrestar");
+                btn.innerHTML = j;
+            }
+        </script>
+    </body>
+</html>

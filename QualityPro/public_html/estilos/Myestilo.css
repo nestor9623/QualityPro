@@ -1,0 +1,28 @@
+.tamañoDivs{
+    height: 160px;
+    width: 140px;
+    padding-left: inherit;
+}
+
+.fondopagina{
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+
+.darespacio{
+    padding-bottom: 5px;
+}
+
+.darespacioimagen{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+}
+.divPopup{
+    padding-left: inherit;
+}
+
+.centrarTexto{
+    text-align: center;
+}
